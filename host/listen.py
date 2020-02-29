@@ -36,7 +36,7 @@ if __name__ == "__main__":
     # One approach to autodiscovering a port with a MIN device on the other end is to open
     # all the ports on the machine and listen for a heartbeat: the chances of random data
     # appearing as a valid MIN frame with a magic number in the payload are virtually zero.
-    min_handler = MINTransportSerial(port=MIN_PORT)
+    min_handler = MINTransportSerial(port=MIN_PORT, baudrate=115200)
 
     min_id = 0x01
     while True:
